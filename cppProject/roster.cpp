@@ -72,3 +72,14 @@ void Roster::printInvalidEmails(){
             }
     });
 }
+
+
+void Roster::printByDegreeProgram(DegreeProgram degreeProgram){
+    for_each(this->students.begin(), this->students.end(), [degreeProgram](Student * student){
+        if(student->getDegreeProgram() == degreeProgram){
+            student->print();
+            cout << "---------------------------------------------------------------------------" << endl;
+        }
+    });
+
+}

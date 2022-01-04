@@ -29,6 +29,10 @@ Student::~Student(){
 
 int Student::getAvgDays(){return((daysInCourse[0] + daysInCourse[1] + daysInCourse[2]) / 3);}
 
+DegreeProgram Student::getDegreeProgram(){
+    return(this->degreeProgram);
+}
+
 string Student::getDegreeProgram(DegreeProgram prog){
     return( (const string[]){"Invalid Degree","SECURITY", "NETWORK", "SOFTWARE"}[degreeProgram] );
 }

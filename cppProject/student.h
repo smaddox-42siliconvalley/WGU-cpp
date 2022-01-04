@@ -46,6 +46,7 @@ class Student{
        int * getDaysInCourses() { return(daysInCourse); }
        int getAvgDays();
        string getDegreeProgram(DegreeProgram prog);
+       DegreeProgram getDegreeProgram();
        DegreeProgram getDegreeProgram(string prog);
 
 

@@ -1,5 +1,6 @@
 #include <string>
 #include "student.h"
+#include "degree.h"
 #include <sstream>
 #include <iostream>
 #include <vector>
@@ -8,7 +9,7 @@
 class Roster{
     private:
         vector<Student*> students;
-        vector<Student*> classRosterArray;
+        vector<Student*> classRosterArray; //make normal array
     
     public:
         Roster(const string * studentData, unsigned int size);
@@ -20,6 +21,6 @@ class Roster{
         void printAll();
         void printAverageDaysInCourse(string studentID);
         void printInvalidEmails();
-        void printByDegreeProgram(string degreeProgram);
+        void printByDegreeProgram(DegreeProgram degreeProgram);
         Student* getStudentById(string studentID);
 };
