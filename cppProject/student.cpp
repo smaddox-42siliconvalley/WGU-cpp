@@ -78,11 +78,11 @@ int* Student::getDaysInCourses(){
 //other funcs
 
 void Student::print(){
-    cout <<  studentID << "\t";
-    cout <<  "First Name: " + firstName << "\t";
-    cout <<  "Last Name: " + lastName << "\t";
-    cout << "Age: " << age << "\t";
-    cout << "daysInCourse: {" << daysInCourse[0] << "," << daysInCourse[1] << "," << daysInCourse[2] << "}" << "\t";
+    cout <<  studentID << "\t" << flush;
+    cout <<  "First Name: " + firstName << "\t" << flush;
+    cout <<  "Last Name: " + lastName << "\t" << flush;
+    cout << "Age: " << age << "\t" << flush;
+    cout << "daysInCourse: {" << daysInCourse[0] << "," << daysInCourse[1] << "," << daysInCourse[2] << "}" << "\t" << flush;
     cout << "Degree Program: "  <<  getDegreeProgram(degreeProgram) << endl;
 };
 

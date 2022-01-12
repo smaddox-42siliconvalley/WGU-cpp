@@ -20,7 +20,6 @@ Roster::Roster(const string * studentData, unsigned int size){
     }
 }
 
-//THIS GOT DELETE SOMEHOW? REDO IT AND DONT FORGET TO DELETE THE STUDENT OBJECTS THAT WERE ALLOCATED
 Roster::~Roster(){
 	for_each(classRosterArray.begin(), classRosterArray.end(), [](Student* student){
 		delete(student);
@@ -64,14 +63,12 @@ void Roster::printAll(){
         
 Student* Roster::getStudentById(const string studentId){
     Student * result_student = NULL;
-    //for_each(this->classRosterArray.begin(), this->classRosterArray.end(), [studentId, &result_student](Student * student){
     for_each(classRosterArray.begin(), classRosterArray.end(), [studentId, &result_student](Student * student){
         if((student) && (student->getStudentID() == studentId)) {result_student = student;}});
     return(result_student);
 }
         
 void Roster::printAverageDaysInCourse(string studentID){
-    //Student * student = this->getStudentById(studentID);
 	string ID = studentID;
     Student * student = getStudentById(ID);
     if(student){
@@ -84,7 +81,7 @@ void Roster::printAverageDaysInCourse(string studentID){
 
 void Roster::printInvalidEmails(){
     for_each(this->classRosterArray.begin(), this->classRosterArray.end(), [](Student * student){
-        if(!((student->getEmail().find("@") != std::string::npos) && 
+        if(student && !((student->getEmail().find("@") != std::string::npos) && 
             (student->getEmail().find(".") != std::string::npos) && 
             (student->getEmail().find(" ") == std::string::npos))){
                cout << "Email belonging to:" << student->getStudentID() << "\n" << student->getEmail() << " is invalid" << endl;
@@ -97,7 +94,6 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram){
     for_each(this->classRosterArray.begin(), this->classRosterArray.end(), [degreeProgram](Student * student){
         if(student->getDegreeProgram() == degreeProgram){
             student->print();
-            cout << "---------------------------------------------------------------------------" << endl;
         }
     });
 
