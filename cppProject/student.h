@@ -4,10 +4,6 @@
 
 using namespace std;
 
-/*
-        DONT FORGET TO CHANGE THE DEGREEPROGRAM DATATYPE TO THE ENUMERATED ONE
-*/
-
 class Student{
     private: 
         string studentID;
@@ -25,25 +21,21 @@ class Student{
         ~Student();
 
        //setters
-       int setStudentID(string ID) { studentID = ID; return(0); }
-       int setFirstName(string name) { firstName = name; return(0); }
-       int setLastName(string name) { lastName = name; return(0); } 
-       int setEmail(string Email) {email = Email; return(0); }
-       int setAge(int Age) {age = Age; return(0); }
-       int setDaysInCourse(int daysInCourse1, int daysInCourse2, int daysInCourse3) {
-           daysInCourse[0] = daysInCourse1;
-           daysInCourse[1] = daysInCourse2;
-           daysInCourse[2] = daysInCourse3;
-           return(0);
-       }
+       int setStudentID(string ID);
+       int setFirstName(string name);
+       int setLastName(string name); 
+       int setEmail(string Email);
+       int setAge(int Age);
+       int setDaysInCourse(int daysInCourse1, int daysInCourse2, int daysInCourse3);
+       
 
        //getters
-       string getStudentID() { return(studentID); }
-       string getFirstName() { return(firstName); }
-       string getLastName() { return(lastName); }
-       string getEmail() { return(email); }
-       int getAge() { return(age); }
-       int * getDaysInCourses() { return(daysInCourse); }
+       string getStudentID();
+       string getFirstName();
+       string getLastName();
+       string getEmail();
+       int getAge();
+       int * getDaysInCourses();
        int getAvgDays();
        string getDegreeProgram(DegreeProgram prog);
        DegreeProgram getDegreeProgram();

@@ -1,2 +1,3 @@
 #include <string>
-enum DegreeProgram {NULLL, SECURITY, NETWORK, SOFTWARE};
+//Changed NULLL to INVALID
+enum DegreeProgram {INVALID, SECURITY, NETWORK, SOFTWARE};
